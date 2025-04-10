@@ -1,0 +1,36 @@
+import 'package:flutter/material.dart';
+abstract class AppColors {
+  static const Color primaryBlue = Color(0xFF0667EE);
+  static const Color labelBlack = Color(0xFF12121D);
+  static const Color lightPrimary = Color(0xFFFFF7E0);
+  static const Color whiteFCF8D0 = Color(0xFFFCF8D0);
+  static const Color grey4F4F4F = Color(0xFF4F4F4F);
+  static const Color secondary = Color(0xFFDB9939);
+  static const Color greyBorder = Color(0xFFF2F2F2);
+  static const Color gradient1 = Color(0xFF322F2E);
+  static const Color blackText = Color(0xFF1E1D26);
+  static const Color primary3 = Color(0xFFFCF3ED);
+  static const Color primary2D9C0 = Color(0xFFF2D9C0);
+  static const Color greyE6E6E6 = Color(0xFFE6E6E6);
+  static const Color third = Color(0xFF7EA259);
+  static const Color blue = Color(0xFF1570EF);
+  static const Color lightBlue = Color(0xFFD1E9FF);
+  static const Color white = Color(0xFFFFFFFF);
+  static const Color black = Color(0xFF0F0F0F);
+  static const Color shadowColor  =   Color(0xFF000000);
+  static const Color black1E1E1E = Color(0xFF1E1E1E);
+  static const Color grey9C9C9C = Color(0xFF9C9C9C);
+  static const Color grey383838 = Color(0xFF383838);
+  static const Color grey = Color(0xFF828282);
+  static const Color lightGrey = Color(0xFFCCCCCC);
+  static const Color whiteGrey = Color(0xFF5B5B5B);
+  static const Color hintText = Color(0xFF5B5B5B);
+  static const Color shadow = Color(0xFF5B5B5B);
+  static const Color darkBlue = Color(0xFF384250);
+  static const Color border = Color(0xFF5B5B5B);
+  static const Color scaffoldBackground = Color(0xffFEFCFB);
+  static const Color buttonText = Color(0xffFFFFFF);
+  static const Color grey800 = Color(0xFF696969);
+  static const Color error = Color(0xFFD92D20);
+  static const Color error700 = Color(0xFFB42618);
+}

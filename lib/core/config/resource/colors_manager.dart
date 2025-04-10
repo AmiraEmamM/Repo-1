@@ -8,5 +8,5 @@ static const Color scaffoldBackground = Color(0xFFFFFFFF);
  static const Color border = Color(0xFF5B5B5B);
 static const Color blackText = Color(0xFF1E1D26);
  static const Color grey = Color(0xFF828282);
- static const blurColor = Color(0xFFD9D9D973);
+ static const blurColor = Color(0xFFD9D9D9);
 }

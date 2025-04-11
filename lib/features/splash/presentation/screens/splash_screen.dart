@@ -3,9 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:green_pulse/core/config/resource/app_assets.dart';
 import 'package:green_pulse/core/config/resource/app_size.dart';
 import 'package:green_pulse/core/config/resource/app_styles.dart';
-import 'package:green_pulse/core/navigation/navigator.dart';
 import 'package:green_pulse/features/auth/presentation/screens/login_screen.dart';
 
+import '../../../../core/config/navigation/navigator.dart';
 import '../../../../core/config/resource/colors_manager.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -65,12 +65,12 @@ class _SplashScreenState extends State<SplashScreen>
               fit: BoxFit.cover,
             ),
           ),
-          SlideTransition(
-            position: _text1Animation,
-            child: Positioned(
-              top: .22.sh,
-              left: 0,
-              right: 0,
+          Positioned(
+            top: .22.sh,
+            left: 0,
+            right: 0,
+            child: SlideTransition(
+              position: _text1Animation,
               child: Center(
                 child: Text(
                   'GreenPulse',
@@ -79,12 +79,12 @@ class _SplashScreenState extends State<SplashScreen>
               ),
             ),
           ),
-          SlideTransition(
-            position: _text2Animation,
-            child: Positioned(
-              top: .28.sh,
-              left: 0,
-              right: 0,
+          Positioned(
+            top: .28.sh,
+            left: 0,
+            right: 0,
+            child: SlideTransition(
+              position: _text2Animation,
               child: Center(
                 child: Text(
                   'smart farm at your house',
@@ -95,20 +95,19 @@ class _SplashScreenState extends State<SplashScreen>
               ),
             ),
           ),
-          SlideTransition(
-            position: _buttonAnimation,
-            child: Positioned(
-              top: .8.sh,
-              left: 0,
-              right: 0,
-              child: InkWell(
+          Positioned(
+            top: .8.sh,
+            left: 0,
+            right: 0,
+            child: SlideTransition(
+              position: _buttonAnimation,
+              child: GestureDetector(
                 onTap: () {
                   Go.to(const LoginScreen());
                 },
                 child: Center(
                   child: Container(
-                    padding:
-                    EdgeInsets.symmetric(horizontal: 74.w, vertical: 12.h),
+                    padding: EdgeInsets.symmetric(horizontal: 74.w, vertical: 12.h),
                     decoration: BoxDecoration(
                       color: AppColors.blurColor.withValues(alpha: .4),
                       borderRadius: BorderRadius.circular(AppCircular.r12),

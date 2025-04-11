@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../../../config/navigation/navigator.dart';
 import '../../../config/resource/app_size.dart';
 import '../../../config/resource/colors_manager.dart';
-import '../../../navigation/navigator.dart';
 
 class ButtonClose extends StatelessWidget {
   final VoidCallback? onTap;

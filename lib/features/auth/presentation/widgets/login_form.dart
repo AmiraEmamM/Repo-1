@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:green_pulse/core/navigation/navigator.dart';
 import 'package:green_pulse/core/shared/widgets/buttons/loading_button.dart';
 import 'package:green_pulse/features/auth/presentation/screens/sign_up_screen.dart';
 
+import '../../../../core/config/navigation/navigator.dart';
 import '../../../../core/config/resource/app_size.dart';
 import '../../../../core/config/resource/app_styles.dart';
 import '../../../../core/config/resource/colors_manager.dart';

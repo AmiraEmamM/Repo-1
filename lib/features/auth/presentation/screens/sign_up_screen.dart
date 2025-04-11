@@ -23,7 +23,7 @@ class SignUpScreen extends StatelessWidget {
               clipper: TopCurveClipper(),
               child: Image.asset(
                 AppImages.autImage,
-                height: .33.sh,
+                height: .22.sh,
                 width: double.infinity,
                 fit: BoxFit.cover,
               ),

@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:green_pulse/core/config/theme/theme.dart';
+import 'package:green_pulse/core/navigation/navigator.dart';
+import 'package:green_pulse/core/navigation/route_generator.dart';
 
 import '../../../features/splash/presentation/screens/splash_screen.dart';
 import '../../config/resource/app_size.dart';
+import '../route_observer.dart';
 
 class GreenPulse extends StatelessWidget {
   const GreenPulse({super.key});
@@ -20,12 +23,13 @@ class GreenPulse extends StatelessWidget {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
             theme: AppTheme.light,
-            home:const SplashScreen(),
+            onGenerateRoute: RouterGenerator.getRoute,
+            navigatorKey: Go.navigatorKey,
+            navigatorObservers: [AppNavigationObserver()],
+            home: const SplashScreen(),
           );
-        }
+        },
       ),
     );
   }
 }
-
-

@@ -37,6 +37,7 @@ class AppPadding {
   static double pH10 = 10.0.h;
   static double pH12 = 12.0.h;
   static double pH14 = 14.0.h;
+  static double pH15 = 15.0.h;
   static double pH16 = 16.0.h;
   static double pH18 = 18.0.h;
   static double pH20 = 20.0.h;
@@ -53,6 +54,7 @@ class AppPadding {
   static double pW10 = 10.0.w;
   static double pW12 = 12.0.w;
   static double pW14 = 14.0.w;
+  static double pW15 = 15.0.h;
   static double pW16 = 16.0.w;
   static double pW18 = 18.0.w;
   static double pW20 = 20.0.w;
@@ -63,6 +65,7 @@ class AppPadding {
 class AppSize {
   // VALUES FOR HEIGHT
   static double sH0 = 0.0.h;
+  static double sH1 = 1.0.h;
   static double sH2 = 2.0.h;
   static double sH4 = 4.0.h;
   static double sH6 = 6.0.h;
@@ -123,6 +126,11 @@ class FontSize {
   static double s20 = 20.0.sp;
   static double s22 = 22.0.sp;
   static double s24 = 24.0.sp;
+  static double s26 = 26.0.sp;
+  static double s25 = 25.0.sp;
+  static double s27 = 27.0.sp;
+  static double s30 = 30.0.sp;
+
   static double s36 = 36.0.sp;
 }
 

@@ -12,39 +12,39 @@ class TermsAndConditionsWidget extends StatelessWidget {
     return SizedBox(
       child: Row(
         children: [
-         const CheckBoxWidget(),
-           SizedBox(width: AppSize.sW10),
+          const CheckBoxWidget(),
+          SizedBox(width: AppSize.sW10),
           Expanded(
             child: Text.rich(
               TextSpan(
                 children: [
-                   TextSpan(
+                  TextSpan(
                     text: "by signing up you agree to our ",
-                     style: AppStyles.medium20.copyWith(
-                       color: AppColors.grey888888,
-                       fontSize: FontSize.s15,
-                     )
+                    style: AppStyles.medium20.copyWith(
+                      color: AppColors.grey888888,
+                      fontSize: FontSize.s15,
+                    ),
                   ),
                   TextSpan(
                     text: "terms & conditions ",
                     style: AppStyles.medium20.copyWith(
                       color: AppColors.blackText,
                       fontSize: FontSize.s15,
-                    )
+                    ),
                   ),
-                   TextSpan(
+                  TextSpan(
                     text: "of use and ",
-                      style: AppStyles.medium20.copyWith(
-                        color: AppColors.grey888888,
-                        fontSize: FontSize.s15,
-                      )
+                    style: AppStyles.medium20.copyWith(
+                      color: AppColors.grey888888,
+                      fontSize: FontSize.s15,
+                    ),
                   ),
                   TextSpan(
                     text: "privacy policy.",
-                    style:AppStyles.medium20.copyWith(
+                    style: AppStyles.medium20.copyWith(
                       color: AppColors.blackText,
                       fontSize: FontSize.s15,
-                    ) ,
+                    ),
                   ),
                 ],
               ),

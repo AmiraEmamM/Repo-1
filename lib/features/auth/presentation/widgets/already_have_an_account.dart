@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:green_pulse/core/navigation/navigator.dart';
+import 'package:green_pulse/features/auth/presentation/screens/login_screen.dart';
 
 import '../../../../core/config/resource/app_size.dart';
 import '../../../../core/config/resource/app_styles.dart';
@@ -21,7 +23,7 @@ class AlreadyHaveAnAccount extends StatelessWidget {
         SizedBox(width: AppSize.sW4),
         GestureDetector(
           onTap: () {
-            // Navigate to the login screen
+            Go.to( const LoginScreen());
           },
           child: Text(
             'Login',

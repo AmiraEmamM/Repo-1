@@ -35,6 +35,7 @@ class SignUpFormWidget extends StatelessWidget {
           DefaultTextField(
             labelColor: AppColors.darkGreen,
             borderColor: AppColors.blurColor,
+            isPassword: true,
             title: "Enter Password",
             contentPadding: EdgeInsets.symmetric(
               vertical: AppSize.sH14,
@@ -47,6 +48,7 @@ class SignUpFormWidget extends StatelessWidget {
           DefaultTextField(
             labelColor: AppColors.darkGreen,
             borderColor: AppColors.blurColor,
+            isPassword: true,
             title: "Confirm Password",
             contentPadding: EdgeInsets.symmetric(
               vertical: AppSize.sH14,

@@ -59,6 +59,7 @@ class AppPadding {
   static double pW18 = 18.0.w;
   static double pW20 = 20.0.w;
   static double pW26 = 26.0.w;
+  static double pW30 = 30.0.w;
   static double pW60 = 60.0.w;
 }
 
@@ -156,4 +157,9 @@ class AppCircular {
   static double r12 = 12.0.r;
   static double r16 = 16.0.r;
   static double r20 = 20.0.r;
+  static double r21 = 21.0.r;
+  static double r30 = 30.0.r;
+  static double r40 = 40.0.r;
+  static double r50 = 50.0.r;
+  static double r60 = 60.0.r;
 }

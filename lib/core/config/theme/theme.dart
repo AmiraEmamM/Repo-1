@@ -8,7 +8,7 @@ import '../resource/colors_manager.dart';
 class AppTheme {
   static ThemeData get light {
     return ThemeData(
-      fontFamily: 'Poppins',
+      fontFamily: 'WorkSans',
       // Apply globally
       primarySwatch: AppColors.white.toMaterialColor(),
       primaryColor: AppColors.white,
@@ -53,7 +53,6 @@ class AppTheme {
         selectionHandleColor: AppColors.white,
       ),
       appBarTheme: AppBarTheme(
-        foregroundColor: AppColors.white,
         centerTitle: false,
         backgroundColor: AppColors.white,
         titleTextStyle: AppStyles.bold24,

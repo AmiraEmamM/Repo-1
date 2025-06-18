@@ -8,6 +8,7 @@ import '../../../../core/config/resource/app_size.dart';
 import '../../../../core/config/resource/app_styles.dart';
 import '../../../../core/config/resource/colors_manager.dart';
 import '../../../../core/shared/widgets/text_fields/default_text_field.dart';
+import '../../../home_tabs/presentation/screens/home_tab_screen.dart';
 
 class LoginFormWidget extends StatelessWidget {
   const LoginFormWidget({super.key});
@@ -94,14 +95,18 @@ class LoginFormWidget extends StatelessWidget {
             ],
           ),
           SizedBox(height: AppSize.sH40),
-          LoadingButton(
-            height: 68.h,
-            borderRadius: AppCircular.r20,
-            color: AppColors.darkBlue,
-            fontFamily: 'Poppins',
-            fontSize: FontSize.s20,
-            title: 'Log In',
-            onTap: () async {},
+          Center(
+            child: LoadingButton(
+              height: 68.h,
+              borderRadius: AppCircular.r20,
+              color: AppColors.darkBlue,
+              fontFamily: 'Poppins',
+              fontSize: FontSize.s20,
+              title: 'Log In',
+              onTap: () async {
+                Go.to(const HomeTabScreen());
+              },
+            ),
           ),
           SizedBox(height: AppSize.sH25),
           Row(

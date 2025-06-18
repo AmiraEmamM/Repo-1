@@ -32,12 +32,12 @@ class _SplashScreenState extends State<SplashScreen>
 
     _text1Animation = Tween<Offset>(
       begin: const Offset(0, -1), // Start above the screen
-      end:  Offset(0, -0.27.h), // End slightly above the center
+      end: Offset(0, -0.27.h), // End slightly above the center
     ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeOut));
 
     _text2Animation = Tween<Offset>(
       begin: const Offset(1, 0), // Start from the right
-      end:  Offset(0, -0.23.h), // End slightly to the right
+      end: Offset(0, -0.23.h), // End slightly to the right
     ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeOut));
 
     _buttonAnimation = Tween<Offset>(
@@ -60,13 +60,10 @@ class _SplashScreenState extends State<SplashScreen>
       body: Stack(
         children: [
           Positioned.fill(
-            child: Image.asset(
-              AppImages.splashImage,
-              fit: BoxFit.cover,
-            ),
+            child: Image.asset(AppImages.splashImage, fit: BoxFit.cover),
           ),
           Positioned(
-            top: .22.sh,
+            top: 0.22.sh,
             left: 0,
             right: 0,
             child: SlideTransition(
@@ -88,9 +85,7 @@ class _SplashScreenState extends State<SplashScreen>
               child: Center(
                 child: Text(
                   'smart farm at your house',
-                  style: AppStyles.regular14.copyWith(
-                    color: AppColors.white,
-                  ),
+                  style: AppStyles.regular14.copyWith(color: AppColors.white),
                 ),
               ),
             ),
@@ -107,14 +102,19 @@ class _SplashScreenState extends State<SplashScreen>
                 },
                 child: Center(
                   child: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 74.w, vertical: 12.h),
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 74.w,
+                      vertical: 12.h,
+                    ),
                     decoration: BoxDecoration(
                       color: AppColors.blurColor.withValues(alpha: .4),
                       borderRadius: BorderRadius.circular(AppCircular.r12),
                     ),
                     child: Text(
                       'Get Started',
-                      style: AppStyles.medium20.copyWith(color: AppColors.white),
+                      style: AppStyles.medium20.copyWith(
+                        color: AppColors.white,
+                      ),
                     ),
                   ),
                 ),

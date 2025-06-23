@@ -2,8 +2,14 @@ import 'package:flutter/material.dart';
 abstract class AppColors {
   static const Color primaryBlue = Color(0xFF0667EE);
   static const Color blue2D53EB = Color(0xFF2D53EB);
+  static const Color blue5177FF = Color(0xFF5177FF);
   static const Color lightPink = Color(0xFFFFFE9E2);
   static const Color greenForNotification = Color(0xFF98C13F);
+  static const Color primary2 = Color(0xFF214EF3); // For "All" chip
+  static const Color chipBg = Color(0xFFF2F2F2);
+  static const Color cardBg = Color(0xFFE9F7F6);
+  static const Color price = Color(0xFF2ECC71);
+  static const Color rating = Color(0xFFFFC107);
   static const Color veryLightBlue = Color(0xFFDDF2F8);
   static const Color green0D986A = Color(0xFF0D986A);
   static const Color green689F18 = Color(0xFF689F18);
@@ -12,7 +18,7 @@ abstract class AppColors {
   static const Color faceBookColor = Color(0xFF1877F2);
   static const Color lightGreen  = Color(0xffE0ECCE);
   static const Color darkBlue = Color(0xFF0638FF);
-  static const Color veryLightGreen = Color(0xFF1D3508);
+  static const Color veryDarkGreen = Color(0xFF1D3508);
   static const Color greyAFAFAF = Color(0xFFAFAFAF);
   static const Color primary = Color(0xFFFFFFFF);
   static const Color labelBlack = Color(0xFF12121D);

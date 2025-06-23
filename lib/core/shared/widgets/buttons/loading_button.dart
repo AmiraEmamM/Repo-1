@@ -48,9 +48,9 @@ class LoadingButton extends StatelessWidget {
         width: width ?? MediaQuery.sizeOf(context).width,
         minWidth: AppSize.sW50,
         height: height ?? AppSize.sH50,
-        color: color ?? AppColors.primary,
+        color: color ?? AppColors.primary2,
         borderRadius: borderRadius ?? AppSize.sH10,
-        disabledColor: color ?? AppColors.primary,
+        disabledColor: color ?? AppColors.primary2,
         borderSide: borderSide,
         loader: const CupertinoActivityIndicator(
           color: Colors.white,

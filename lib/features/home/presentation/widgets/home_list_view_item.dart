@@ -58,7 +58,7 @@ class HomeListViewItem extends StatelessWidget {
                     Text(
                       homeProductModel.description,
                       style: AppStyles.light12.copyWith(
-                        color: AppColors.veryLightGreen,
+                        color: AppColors.veryDarkGreen,
                       ),
                     ),
                   ],

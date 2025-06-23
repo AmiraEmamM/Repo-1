@@ -8,8 +8,8 @@ import '../../../../core/config/resource/app_assets.dart';
 import '../../../../core/shared/widgets/app_title_widget.dart';
 
 class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const HomeAppBar({super.key});
-
+  const HomeAppBar({super.key, this.isFromDrawer});
+final bool ? isFromDrawer;
   @override
   Widget build(BuildContext context) {
     return  AppBar(
@@ -30,12 +30,22 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
         ),
       ],
       title: const AppTitleWidget(),
-      leading: Padding(
-        padding: EdgeInsetsDirectional.only(start: 25.0.w),
-        child: SvgPicture.asset(
-          AppIcons.menuIcon,
-          height: 16.h,
-          width: 16.w,
+      leading: GestureDetector(
+        onTap: (){
+          if (isFromDrawer == true){
+            Go.back();
+          }else {
+            Scaffold.of(context).openDrawer();
+
+          }
+        },
+        child: Padding(
+          padding: EdgeInsetsDirectional.only(start: 25.0.w),
+          child: SvgPicture.asset(
+          isFromDrawer == true? AppIcons.backIcon  :AppIcons.menuIcon,
+            height: 16.h,
+            width: 16.w,
+          ),
         ),
       ),
     );

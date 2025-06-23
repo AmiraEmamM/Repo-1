@@ -66,20 +66,20 @@ class DefaultButton extends StatelessWidget {
             onPressed: onTap,
             style: ElevatedButton.styleFrom(
               splashFactory: InkRipple.splashFactory,
-              backgroundColor: color ?? AppColors.primary,
+              backgroundColor: color ?? AppColors.primary2,
               foregroundColor: textColor ?? Colors.white,
               shape: RoundedRectangleBorder(
                 borderRadius:
                     borderRadius ?? BorderRadius.circular(AppSize.sH30),
                 side: borderColor != null
                     ? BorderSide(
-                        color: borderColor ?? AppColors.primary, width: 1)
+                        color: borderColor ?? AppColors.primary2, width: 1)
                     : BorderSide.none,
               ),
               elevation: elevation ?? 0.0,
             ).copyWith(
               backgroundColor:
-                  WidgetStateProperty.all(color ?? AppColors.primary),
+                  WidgetStateProperty.all(color ?? AppColors.primary2),
               surfaceTintColor: WidgetStateProperty.all(Colors.transparent),
             ),
             child: isFitted

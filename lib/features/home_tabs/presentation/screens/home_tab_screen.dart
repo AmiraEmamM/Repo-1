@@ -4,11 +4,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:green_pulse/core/config/resource/app_assets.dart';
 import 'package:green_pulse/core/config/resource/colors_manager.dart';
 import 'package:green_pulse/features/home/presentation/screens/home_screen.dart';
-
+import '../../../camera_screen/camera_screen.dart';
 import '../../../cart/presentation/screens/cart_screen.dart';
 import '../../../health_mentor/presentation/screens/health_mentor.dart';
 import '../../../home/presentation/widgets/home_app_bar.dart';
-import '../../../profile/presentation/screens/profile_screen.dart';
+import '../../../settings/presentation/screens/drawer_screen.dart';
 
 class HomeTabScreen extends StatefulWidget {
   const HomeTabScreen({super.key});
@@ -20,7 +20,7 @@ class HomeTabScreen extends StatefulWidget {
 class _HomeTabScreenState extends State<HomeTabScreen> {
   final List<Widget> _screens = [
     const HomeScreen(),
-    const ProfileScreen(),
+    const CameraScreen(),
     const CartScreen(),
     const HealthMentor(),
   ];
@@ -29,6 +29,7 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const HomeAppBar(),
+      drawer:const DrawerScreen(),
       bottomNavigationBar: BottomNavigationBar(
         elevation: 0,
         selectedItemColor: Colors.transparent,
@@ -43,13 +44,14 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
               children: [
                 SvgPicture.asset(AppIcons.homeIcon),
                 SizedBox(height: 4.h),
+
                 Container(width: 20.w, height: 2.h, color: AppColors.darkGreen),
               ],
             ),
           ),
           BottomNavigationBarItem(
             label: '',
-            icon: SvgPicture.asset(AppIcons.profileIcon),
+            icon: SvgPicture.asset(AppIcons.cameraIcon),
             activeIcon: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

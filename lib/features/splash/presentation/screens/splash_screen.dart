@@ -7,6 +7,8 @@ import 'package:green_pulse/features/auth/presentation/screens/login_screen.dart
 
 import '../../../../core/config/navigation/navigator.dart';
 import '../../../../core/config/resource/colors_manager.dart';
+import '../../../../core/shared/shared_pref_services.dart';
+import '../../../home_tabs/presentation/screens/home_tab_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -97,8 +99,13 @@ class _SplashScreenState extends State<SplashScreen>
             child: SlideTransition(
               position: _buttonAnimation,
               child: GestureDetector(
-                onTap: () {
-                  Go.to(const LoginScreen());
+                onTap: () async {
+                  final isLoggedIn = await SharedPrefService.isLoggedIn();
+                  if (isLoggedIn) {
+                    Go.offAll(const HomeTabScreen());
+                  } else {
+                    Go.to(const LoginScreen());
+                  }
                 },
                 child: Center(
                   child: Container(

@@ -5,14 +5,18 @@ import 'package:green_pulse/core/config/resource/colors_manager.dart';
 import 'package:green_pulse/features/auth/presentation/widgets/check_box_widget.dart';
 
 class TermsAndConditionsWidget extends StatelessWidget {
-  const TermsAndConditionsWidget({super.key});
-
+  const TermsAndConditionsWidget({super.key, required this.isChecked, this.onTap});
+  final   bool isChecked ;
+  final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       child: Row(
         children: [
-          const CheckBoxWidget(),
+           CheckBoxWidget(
+            isChecked: isChecked,
+            onTap: onTap,
+           ),
           SizedBox(width: AppSize.sW10),
           Expanded(
             child: Text.rich(

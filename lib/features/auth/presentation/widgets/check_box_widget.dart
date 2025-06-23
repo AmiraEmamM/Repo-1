@@ -5,15 +5,16 @@ import '../../../../core/config/resource/app_size.dart';
 import '../../../../core/config/resource/colors_manager.dart';
 
 class CheckBoxWidget extends StatefulWidget {
-  const CheckBoxWidget({super.key});
-
+  const CheckBoxWidget({super.key, required this.isChecked, this.onTap});
+final   bool isChecked ;
+final void Function()? onTap;
   @override
   State<CheckBoxWidget> createState() => _CheckBoxWidgetState();
 }
 
 class _CheckBoxWidgetState extends State<CheckBoxWidget>
     with SingleTickerProviderStateMixin {
-  bool isChecked = false;
+  late bool isChecked = widget.isChecked;
   late AnimationController _controller;
   late Animation<Offset> _slideAnimation;
 
@@ -40,6 +41,7 @@ class _CheckBoxWidgetState extends State<CheckBoxWidget>
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
+        widget.onTap?.call();
         setState(() {
           isChecked = !isChecked;
           if (isChecked) {

@@ -20,24 +20,45 @@ class HealthMentorBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(children:  [
-     const HealthMentorItem(
-       color: AppColors.lightPink,
-       image:  AppImages.healthMentor1,
-     ),
-      SizedBox(height: AppSize.sH10 ,),
-     const HealthMentorItem(
-       color: AppColors.veryLightBlue,
-        image:  AppImages.healthMentor2,
-      ),
-    ]);
+    return ListView(
+      children: [
+        HealthMentorItem(
+          color: AppColors.lightPink,
+          image: AppImages.healthMentor1,
+          title: 'Starwberry',
+          description: 'Your plant is healthy',
+          descriptionColor: AppColors.white,
+          descriptionIcon: AppIcons.treeBranchIcon,
+        ),
+        SizedBox(height: AppSize.sH10),
+         HealthMentorItem(
+          color: AppColors.veryLightBlue,
+          image: AppImages.healthMentor2,
+          title: 'Broccoli',
+          description: 'Your plant is thirsty',
+          descriptionColor: const Color(0xFFCFE6ED),
+          descriptionIcon: AppIcons.waterDrinkerIcon,
+        ),
+      ],
+    );
   }
 }
 
 class HealthMentorItem extends StatelessWidget {
-  const HealthMentorItem({super.key, required this.image, required this.color});
-final String image;
-final Color color;
+  const HealthMentorItem({
+    super.key,
+    required this.image,
+    required this.color,
+    required this.title,
+    required this.description,
+    required this.descriptionColor, required this.descriptionIcon,
+  });
+  final String image;
+  final Color color;
+  final String title;
+  final String description;
+  final Color descriptionColor;
+  final String descriptionIcon;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -61,7 +82,7 @@ final Color color;
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Starwberry', style: AppStyles.bold20),
+                  Text(title, style: AppStyles.bold20),
                   SizedBox(height: AppSize.sH6),
                   Text(
                     'Indoor',
@@ -190,20 +211,20 @@ final Color color;
                     ),
                     SizedBox(height: AppSize.sH20),
                     Container(
-                      padding:  EdgeInsets.symmetric(
+                      padding: EdgeInsets.symmetric(
                         horizontal: AppPadding.pW10,
                         vertical: AppPadding.pH6,
                       ),
                       decoration: BoxDecoration(
-                        color: AppColors.white,
+                        color: descriptionColor,
                         borderRadius: BorderRadius.circular(AppCircular.r8),
                       ),
                       child: Row(
                         children: [
-                          SvgPicture.asset(AppIcons.treeBranchIcon),
+                          SvgPicture.asset(descriptionIcon),
                           SizedBox(width: AppSize.sW6),
                           Text(
-                            'Your plant is healthy',
+                            description,
                             style: AppStyles.regular14.copyWith(
                               fontSize: FontSize.s11,
                               color: AppColors.darkGreen,
@@ -212,16 +233,11 @@ final Color color;
                         ],
                       ),
                     ),
-
                   ],
                 ),
                 SizedBox(width: AppSize.sW20),
                 Flexible(
-                  child: Image.asset(
-                   image,
-                    height: 166.h,
-                    width: 166.w,
-                  ),
+                  child: Image.asset(image, height: 166.h, width: 166.w),
                 ),
               ],
             ),
